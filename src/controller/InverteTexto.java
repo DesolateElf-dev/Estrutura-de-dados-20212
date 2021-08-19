@@ -32,8 +32,9 @@ public class InverteTexto {
  				b)	O caracter que será tomado na posição é apontado pela tamanho da String -1
 				ou seja, se é uma String de tamanho 7, ele pegará o caracter da posição 7-1
 				Exemplo:
-				E d u a r d o  String tamanho 7
-				0 1 2 3 4 5 6  Char position
+				1 2 3 4 5 6 7	Tamanho
+				E d u a r d o  	String
+				0 1 2 3 4 5 6  	Position
 				
 				O caracter na posição (tamanho  , tamanho-1) será o 'o'
 				O caracter na posição (tamanho-1, tamanho-2) será o 'd'
