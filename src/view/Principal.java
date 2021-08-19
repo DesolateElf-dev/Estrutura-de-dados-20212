@@ -12,7 +12,9 @@ public class Principal {
 		
 		InverteTexto vc = new InverteTexto();
 		
-		String otxet = vc.Inversor(texto);
+		int tamanho = texto.length();
+		
+		String otxet = vc.Inversor(texto, tamanho);
 		
 		System.out.println(otxet);
 
