@@ -8,8 +8,6 @@ public class InverteTexto {
 	
 	public String Inversor(String texto, int tamanho) {
 		
-		String otxet;	
-		
 		// a) A posição de parada é determinada pelo "tamanho" da String, como se fosse um vetor de caracteres
 		//    então quando o tamanho desse vetor imaginário chega a 0, ele para a recursividade
 		
@@ -21,7 +19,7 @@ public class InverteTexto {
 
 /**			
 			int position = tamanho - 1;				
-			otxet = texto.substring(position,tamanho);
+			String otxet = texto.substring(position,tamanho);
 			tamanho--;
 			
 			return otxet + Inversor(texto,tamanho);
