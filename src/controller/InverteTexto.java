@@ -18,15 +18,14 @@ public class InverteTexto {
 			return "";
 			
 		} else {
+
+/**			
+			int position = tamanho - 1;				
+			otxet = texto.substring(position,tamanho);
+			tamanho--;
 			
-//			int position = tamanho - 1;	
-			
-//			otxet = texto.substring(position,tamanho);
-			
-//			tamanho--;
-			
-//			return otxet + Inversor(texto,tamanho);
-			
+			return otxet + Inversor(texto,tamanho);
+**/			
 			return texto.substring(tamanho-1, tamanho) + Inversor(texto, tamanho-1);
 			
 /**			
