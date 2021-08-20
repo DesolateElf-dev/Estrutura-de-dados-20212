@@ -12,7 +12,8 @@ public class ContaNumero {
 			return 0;
 		} else {
 			
-			int quantidade = quantidade + Contador(n, check);
+			int quantidade=0;
+			quantidade = quantidade + Contador((n % 10), check);
 			
 			if (n%0 == check) {
 				return 1;
