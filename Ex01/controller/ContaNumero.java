@@ -8,6 +8,8 @@ public class ContaNumero {
 	
 	public int Verifica(int n, int check, int soma) {
 		
+		
+		//condição de parada, quando o n que é numero/10 = 0
 		if (n==0) {
 			return soma;
 		} else {
