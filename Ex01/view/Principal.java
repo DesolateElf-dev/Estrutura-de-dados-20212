@@ -63,6 +63,19 @@ public class Principal {
 		static void SomaNaturaisView() {
 			
 		}
+		
+		static void ChecaCaracter() {
+			int quantidade=0;
+			
+			int numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o 1º número: "));
+			int check = Integer.parseInt(JOptionPane.showInputDialog("Digite o 2º número: "));
+			
+			ContaNumero contar = new ContaNumero();
+					
+			quantidade = contar.Contador(numero, check);
+					
+			System.out.println(quantidade);
+		}
 
 
 
