@@ -6,21 +6,20 @@ public class ContaNumero {
 		super();
 	}	
 	
-	public int Contador(int n, int check) {
+	public int Verifica(int n, int check, int soma) {
 		
 		if (n==0) {
 			return 0;
 		} else {
 			
-			int quantidade=0;
-			quantidade = quantidade + Contador((n % 10), check);
-			
-			if (n%0 == check) {
+			if ((n%10)%check == 0) {
+				
+				soma = soma + Verifica(n/10, check);
 				return 1;
-			} else {
-				return 0;
-			}
+			} else {	
+				soma = soma + Verifica(n/10, check);
+				return 0;	
+			}	
 		}
 	}
-
 }

@@ -24,10 +24,10 @@ public class Principal {
 					break;
 				case 3: SomaNaturaisView();
 					break;
-				case 4:
+				case 4: ChecaCaracter();
 					break;
-				case 0:
-					System.exit(0);
+				case 0: System.exit(0);
+				
 				default: JOptionPane.showMessageDialog(null,"Inválido",
 					      "Erro!", JOptionPane.ERROR_MESSAGE);
 				
@@ -72,19 +72,23 @@ public class Principal {
 		}
 		
 		static void ChecaCaracter() {
-			int quantidade=0;
 			
-			int numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o 1º número: "));
-			int check = Integer.parseInt(JOptionPane.showInputDialog("Digite o 2º número: "));
+			int numero, check;
+			
+			do {
+				numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o 1º número: "));
+			} while (numero <=10 || numero>=999999);
+			
+			do {
+				check = Integer.parseInt(JOptionPane.showInputDialog("Digite o 2º número: "));
+			} while (check<=0 || check>=9);
 			
 			ContaNumero contar = new ContaNumero();
 					
-			quantidade = contar.Contador(numero, check);
+			int quantidade = contar.Verifica(numero, check, 0);
 					
 			System.out.println(quantidade);
 		}
-
-
 
 
 }
