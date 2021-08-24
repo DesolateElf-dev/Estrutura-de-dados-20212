@@ -8,13 +8,11 @@ public class SomaNaturais {
 	
 	public int FazSoma(int n) {
 		
-		int soma=0;
-		
-		
-		
-		
-		return soma;
+		if (n<=0) {
+			return 0;
+		} else {
+			
+			return n + FazSoma(n-1);
+		}
 	}
-	
-
 }

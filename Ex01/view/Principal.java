@@ -22,7 +22,7 @@ public class Principal {
 					break;
 				case 2: InverteTextoView();
 					break;
-				case 3:
+				case 3: SomaNaturaisView();
 					break;
 				case 4:
 					break;
@@ -62,6 +62,13 @@ public class Principal {
 		
 		static void SomaNaturaisView() {
 			
+			int n = Integer.parseInt(JOptionPane.showInputDialog("Digite número: "));
+			
+			SomaNaturais soma = new SomaNaturais();
+			
+			int somatoria = soma.FazSoma(n);
+			
+			System.out.println(somatoria);
 		}
 		
 		static void ChecaCaracter() {
