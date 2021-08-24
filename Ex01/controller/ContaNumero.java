@@ -9,16 +9,21 @@ public class ContaNumero {
 	public int Verifica(int n, int check, int soma) {
 		
 		if (n==0) {
-			return 0;
+			return soma;
 		} else {
 			
 			if ((n%10)%check == 0) {
 				
-				soma = soma + Verifica(n/10, check);
-				return 1;
+				soma++;
+				
+				soma = Verifica(n/10, check, soma);
+				
+				return soma;
 			} else {	
-				soma = soma + Verifica(n/10, check);
-				return 0;	
+				
+				soma = Verifica(n/10, check, soma);
+				
+				return soma;	
 			}	
 		}
 	}

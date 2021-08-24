@@ -76,11 +76,11 @@ public class Principal {
 			int numero, check;
 			
 			do {
-				numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o 1º número: "));
+				numero = 342122;//Integer.parseInt(JOptionPane.showInputDialog("Digite o 1º número: "));
 			} while (numero <=10 || numero>=999999);
 			
 			do {
-				check = Integer.parseInt(JOptionPane.showInputDialog("Digite o 2º número: "));
+				check = 2;//Integer.parseInt(JOptionPane.showInputDialog("Digite o 2º número: "));
 			} while (check<=0 || check>=9);
 			
 			ContaNumero contar = new ContaNumero();
