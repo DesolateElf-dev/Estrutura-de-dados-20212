@@ -11,11 +11,11 @@ public class Principal {
 		while(true) {
 			
 			int opc = Integer.parseInt(JOptionPane.showInputDialog(null,"Escolha o programa a ser executado"
-					+ "\n1: Ex 1.1- Calcula fatorial"
-					+ "\n2: Ex 1.2- Inverte um texto"
-					+ "\n3: Ex 2.1- Soma sequencia de números naturais"
-					+ "\n4: Ex 2.2- Checa caracteres de um número"
-					+ "\n0: Finalizar"));			
+					+ "\n1- Ex 1.1: Calcula fatorial"
+					+ "\n2- Ex 1.2: Inverte um texto"
+					+ "\n3- Ex 2.1: Soma sequencia de números naturais"
+					+ "\n4- Ex 2.2: Checa caracteres de um número"
+					+ "\n0- Finalizar"));			
 		
 			switch (opc){
 				case 1: CalcFatView();
