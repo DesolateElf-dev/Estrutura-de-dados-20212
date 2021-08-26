@@ -17,16 +17,11 @@ public class ContaNumero {
 			if ((n%10)%check == 0) {
 				
 				soma++;
+			}
 				
-				soma = Verifica(n/10, check, soma);
+			soma = Verifica(n/10, check, soma);
 				
-				return soma;
-			} else {	
-				
-				soma = Verifica(n/10, check, soma);
-				
-				return soma;	
-			}	
+			return soma;	
 		}
 	}
 }
