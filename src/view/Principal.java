@@ -100,7 +100,7 @@ public class Principal {
 			
 			SortingController oCont = new SortingController();
 			
-			printVetor(vetor);			
+			exigeVetor(vetor);			
 			
 			while(true) {
 				
@@ -112,13 +112,13 @@ public class Principal {
 				switch (opc){
 					case 1: {
 						vetor = oCont.bubbleSort(vetor);
-						printVetor(vetor);
+						exigeVetor(vetor);
 						
 					}
 						break;
 					case 2: {
 						vetor = oCont.mergeSort(vetor, 0, vetor.length - 1);
-						printVetor(vetor);
+						exigeVetor(vetor);
 					}
 						break;					
 					case 0: return;			
@@ -128,7 +128,7 @@ public class Principal {
 			}
 		}
 		
-		static void printVetor(int vetor[]) {
+		static void exigeVetor(int vetor[]) {
 			System.out.println("");
 			System.out.println("=======================================");
 			for (int valor : vetor) {
