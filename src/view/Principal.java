@@ -3,6 +3,7 @@ package view;
 import javax.swing.JOptionPane;
 
 import controller.*;
+import sorting.SortingController;
 
 public class Principal {
 
@@ -15,6 +16,7 @@ public class Principal {
 					+ "\n2- Ex 1.2: Inverte um texto"
 					+ "\n3- Ex 2.1: Soma sequencia de números naturais"
 					+ "\n4- Ex 2.2: Checa caracteres de um número"
+					+ "\n5- Sorting: Algoritmos de Sorting"
 					+ "\n0- Finalizar"));			
 		
 			switch (opc){
@@ -25,6 +27,8 @@ public class Principal {
 				case 3: SomaNaturaisView();
 					break;
 				case 4: ChecaCaracter();
+					break;
+				case 5: sortingAlg();
 					break;
 				case 0: System.exit(0);
 				
@@ -90,5 +94,20 @@ public class Principal {
 			System.out.println(quantidade);
 		}
 
-
+		static void sortingAlg() {
+			int[] vetor = {2,0,1,3,7,8,5,4,9,6};
+//			int[] vetor = {9,8,7,6,5,4,3,2,1,0};
+			
+			SortingController oCont = new SortingController();
+//			vetor = oCont.bubbleSort(vetor);
+			vetor = oCont.mergeSort(vetor, 0, vetor.length - 1);
+			
+			System.out.println("");
+			System.out.println("=======================================");
+			for (int valor : vetor) {
+				System.out.print(valor+" ");
+			}
+			System.out.println("");
+			System.out.println("=======================================");
+		}
 }

@@ -9,12 +9,13 @@ public class SortingController {
 		
 		System.out.println("Vetor da posição "+start+" até "+end);
 		
-		if (start<end) {
-			int middle = (start+end)/2;
-			mergeSort(array, start, end); //Left
-			mergeSort(array, middle+1, end); //Right
-			merge(array, start, middle, end);
+		if (start < end) {
+			int middle = (start + end)/2;
 			
+			mergeSort(array, start, middle); //Left
+			mergeSort(array, middle+1, end); //Right
+			
+			merge(array, start, middle, end);		
 		}
 		return array;
 		
@@ -30,13 +31,13 @@ public class SortingController {
 		int right=middle+1;
 		
 		for(int count=start;count<=end;count++) {
-			if (left<middle) {
+			if (left > middle) {
 				array[count] = newArray[right];
 				right++;
-			} else if (right>end) {
+			} else if (right > end) {
 				array[count] = newArray[left];
 				left++;
-			} else if (newArray[left]<newArray[right]) {
+			} else if (newArray[left] < newArray[right]) {
 				array[count] = newArray[left];
 				left++;
 			} else {
