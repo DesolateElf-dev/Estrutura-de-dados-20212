@@ -95,11 +95,12 @@ public class Principal {
 		}
 
 		static void sortingAlg() {
-			
-//			int[] vetor = {2,0,1,3,7,8,5,4,9,6};
-			int[] vetor = {9,8,7,6,5,4,3,2,1,0};
+
+			int[] vetor = geraVetor(Integer.parseInt(JOptionPane.showInputDialog(null, "Tamanho do vetor: ")));
 			
 			SortingController oCont = new SortingController();
+			
+			printVetor(vetor);			
 			
 			while(true) {
 				
@@ -111,25 +112,13 @@ public class Principal {
 				switch (opc){
 					case 1: {
 						vetor = oCont.bubbleSort(vetor);
-						System.out.println("");
-						System.out.println("=======================================");
-						for (int valor : vetor) {
-							System.out.print(valor+" ");
-						}
-						System.out.println("");
-						System.out.println("=======================================");
+						printVetor(vetor);
 						
 					}
 						break;
 					case 2: {
 						vetor = oCont.mergeSort(vetor, 0, vetor.length - 1);
-						System.out.println("");
-						System.out.println("=======================================");
-						for (int valor : vetor) {
-							System.out.print(valor+" ");
-						}
-						System.out.println("");
-						System.out.println("=======================================");
+						printVetor(vetor);
 					}
 						break;					
 					case 0: return;			
@@ -137,5 +126,25 @@ public class Principal {
 						      "Erro!", JOptionPane.ERROR_MESSAGE);
 				}
 			}
+		}
+		
+		static void printVetor(int vetor[]) {
+			System.out.println("");
+			System.out.println("=======================================");
+			for (int valor : vetor) {
+				System.out.print(valor+" ");
+			}
+			System.out.println("");
+			System.out.println("=======================================");
+		}
+		
+		static int[] geraVetor(int tamanho) {
+			
+			int vetor[] = new int[tamanho];
+			
+			for (int i=0;i<tamanho;i++) {
+				vetor[i] = (int)((Math.random()*51)+0);
+			}			
+			return vetor;
 		}
 }
