@@ -5,6 +5,26 @@ public class SortingController {
 	public SortingController() {
 	}
 	
+	
+	public int[] bubbleSort(int array[]) {
+		int tamanho = array.length;
+		
+		for (int i=0;i<tamanho;i++) {
+			for (int j=0;j<tamanho;j++) {
+				if (array[j]>array[i]+1) {
+					int aux = array[j];
+					array[j] = array[i];
+					array[i] = aux;
+				}
+			}
+			for (int valor : array) {
+				System.out.print(valor + " ");
+			}
+			System.out.println(" ==> Rodada #"+ (i+1));
+		}
+		return array;
+	}
+	
 	public int[] mergeSort(int[] array, int start, int end){
 		
 		System.out.println("Vetor da posição "+start+" até "+end);
@@ -47,5 +67,5 @@ public class SortingController {
 		}
 		
 	}
-
+	
 }

@@ -95,19 +95,47 @@ public class Principal {
 		}
 
 		static void sortingAlg() {
-			int[] vetor = {2,0,1,3,7,8,5,4,9,6};
-//			int[] vetor = {9,8,7,6,5,4,3,2,1,0};
+			
+//			int[] vetor = {2,0,1,3,7,8,5,4,9,6};
+			int[] vetor = {9,8,7,6,5,4,3,2,1,0};
 			
 			SortingController oCont = new SortingController();
-//			vetor = oCont.bubbleSort(vetor);
-			vetor = oCont.mergeSort(vetor, 0, vetor.length - 1);
 			
-			System.out.println("");
-			System.out.println("=======================================");
-			for (int valor : vetor) {
-				System.out.print(valor+" ");
+			while(true) {
+				
+				int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "Escolha o método: "
+						+ "\n1- BubbleSort"
+						+ "\n2- MergeSort"
+						+ "\n0- Voltar"));			
+			
+				switch (opc){
+					case 1: {
+						vetor = oCont.bubbleSort(vetor);
+						System.out.println("");
+						System.out.println("=======================================");
+						for (int valor : vetor) {
+							System.out.print(valor+" ");
+						}
+						System.out.println("");
+						System.out.println("=======================================");
+						
+					}
+						break;
+					case 2: {
+						vetor = oCont.mergeSort(vetor, 0, vetor.length - 1);
+						System.out.println("");
+						System.out.println("=======================================");
+						for (int valor : vetor) {
+							System.out.print(valor+" ");
+						}
+						System.out.println("");
+						System.out.println("=======================================");
+					}
+						break;					
+					case 0: return;			
+					default: JOptionPane.showMessageDialog(null,"Inválido",
+						      "Erro!", JOptionPane.ERROR_MESSAGE);
+				}
 			}
-			System.out.println("");
-			System.out.println("=======================================");
 		}
 }
