@@ -3,8 +3,8 @@ package sorting;
 public class SortingController {
 
 	public SortingController() {
-	}
-	
+		super();
+	}	
 	
 	public int[] bubbleSort(int array[]) {
 		int tamanho = array.length;
