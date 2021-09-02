@@ -3,6 +3,7 @@ package sorting;
 public class SortingController {
 
 	public SortingController() {
+		super();
 	}
 	
 	
