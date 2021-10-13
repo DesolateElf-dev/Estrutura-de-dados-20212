@@ -69,4 +69,26 @@ public class SortingController {
 		
 	}
 	
+	public int[] quickSort(int [] vetor, int inicio, int fim) {
+		
+		
+		return null;
+	}
+	
+	public int getPivo(int[] vetor, int inicio, int fim) {
+		
+		
+		return 0;
+	}
+	
+	
+	private void trocar(int [] vetor, int i, int j) {
+		
+		
+		
+	}
+	
+	
+	
+	
 }
