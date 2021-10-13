@@ -4,6 +4,7 @@ import javax.swing.JOptionPane;
 
 import controller.*;
 import sorting.SortingController;
+import reivisaoN1.*;
 
 public class Principal {
 
@@ -17,6 +18,7 @@ public class Principal {
 					+ "\n3- Ex 2.1: Soma sequencia de números naturais"
 					+ "\n4- Ex 2.2: Checa caracteres de um número"
 					+ "\n5- Sorting: Algoritmos de Sorting"
+					+ "\n6- Exercícios Revisão"
 					+ "\n0- Finalizar"));			
 		
 			switch (opc){
@@ -29,6 +31,8 @@ public class Principal {
 				case 4: ChecaCaracter();
 					break;
 				case 5: sortingAlg();
+					break;
+				case 6: revisao();
 					break;
 				case 0: System.exit(0);
 				
@@ -147,4 +151,32 @@ public class Principal {
 			}			
 			return vetor;
 		}
+		
+		static void revisao() {
+			while(true) {
+					
+				int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "Escolha o método: "
+						+ "\nEx01- Multiplicação"
+						+ "\nEx02- "
+						+ "\n0- Voltar"));					
+				switch (opc){
+					case 1: {
+						int a = Integer.parseInt(JOptionPane.showInputDialog("Digite o primeiro número: "));
+						int b = Integer.parseInt(JOptionPane.showInputDialog("Digite o segundo número: "));
+						
+						Ex01 m = new Ex01();
+						
+						int resultado = m.CalcMult(a, b);
+						
+						System.out.println(resultado);
+					}
+						break;
+					case 2: ;
+						break;					
+					case 0: return;			
+					default: JOptionPane.showMessageDialog(null,"Inválido",
+						      "Erro!", JOptionPane.ERROR_MESSAGE);
+				}
+			}
+	}
 }
