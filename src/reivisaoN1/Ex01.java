@@ -7,10 +7,10 @@ public class Ex01 {
 	}
 	
 	public int CalcMult(int a, int b) {
-		if (a <= 1) {
-			return a;
+		if (a < 1) {
+			return 0;
 		} else {
-			return a + CalcMult(a-1, b);
+			return b + CalcMult(a-1, b);
 		}
 	}
 }

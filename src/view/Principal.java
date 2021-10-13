@@ -153,11 +153,12 @@ public class Principal {
 		}
 		
 		static void revisao() {
+			
 			while(true) {
 					
 				int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "Escolha o método: "
-						+ "\nEx01- Multiplicação"
-						+ "\nEx02- "
+						+ "\n1- Ex01 - Multiplicação"
+						+ "\n2- Ex02 - "
 						+ "\n0- Voltar"));					
 				switch (opc){
 					case 1: {
@@ -168,7 +169,7 @@ public class Principal {
 						
 						int resultado = m.CalcMult(a, b);
 						
-						System.out.println(resultado);
+						System.out.println(a + " x "+ b + " = " + resultado);
 					}
 						break;
 					case 2: ;
@@ -178,5 +179,5 @@ public class Principal {
 						      "Erro!", JOptionPane.ERROR_MESSAGE);
 				}
 			}
-	}
+		}
 }
