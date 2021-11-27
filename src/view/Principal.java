@@ -100,7 +100,7 @@ public class Principal {
 
 		static void sortingAlg() {
 
-			int[] vetor = geraVetor(Integer.parseInt(JOptionPane.showInputDialog(null, "Tamanho do vetor: "))); //{8,1,8,1,3,0,1};
+			int[] vetor = geraVetor(Integer.parseInt(JOptionPane.showInputDialog(null, "Tamanho do vetor: ")));
 			
 			SortingController oCont = new SortingController();
 			
@@ -111,20 +111,25 @@ public class Principal {
 				int opc = Integer.parseInt(JOptionPane.showInputDialog(null, "Escolha o método: "
 						+ "\n1- BubbleSort"
 						+ "\n2- MergeSort"
+						+ "\n3- QuickSort"
 						+ "\n0- Voltar"));			
 			
 				switch (opc){
 					case 1: {
 						vetor = oCont.bubbleSort(vetor);
 						exibeVetor(vetor);
-						
 					}
 						break;
 					case 2: {
 						vetor = oCont.mergeSort(vetor, 0, vetor.length - 1);
 						exibeVetor(vetor);
 					}
-						break;					
+						break;
+						
+					case 3:{
+						vetor = oCont.quickSort(vetor, 0, vetor.length-1);
+						exibeVetor(vetor);
+					}
 					case 0: return;			
 					default: JOptionPane.showMessageDialog(null,"Inválido",
 						      "Erro!", JOptionPane.ERROR_MESSAGE);

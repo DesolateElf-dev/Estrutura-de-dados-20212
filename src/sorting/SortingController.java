@@ -6,6 +6,9 @@ public class SortingController {
 		super();
 	}
 	
+	
+//Bubble Sort	
+	
 	public int[] bubbleSort(int array[]) {
 		
 		int tamanho = array.length;
@@ -28,6 +31,9 @@ public class SortingController {
 		}
 		return array;
 	}
+
+	
+//Merge Sort
 	
 	public int[] mergeSort(int[] array, int start, int end){
 		
@@ -71,25 +77,53 @@ public class SortingController {
 		}
 		
 	}
+
+
+//Quick Sort
 	
 	public int[] quickSort(int [] vetor, int inicio, int fim) {
 		
-		
-		return null;
-	}
+		//verifica se vetor.length > 1
+		if (fim > inicio) {
+			int posicaoPivoFixo = getPivo(vetor, inicio, fim);
+			
+			System.out.println("Posição pivô fixo: " + posicaoPivoFixo);
+			//Esquerda
+			quickSort(vetor, inicio, posicaoPivoFixo -1);
+			//Direita
+			quickSort(vetor, posicaoPivoFixo+1, fim);	
+		}		
+		return vetor;
+	}	
 	
-	public int getPivo(int[] vetor, int inicio, int fim) {
+	private int getPivo(int[] vetor, int inicio, int fim) {
 		
+		int pivoInicial = vetor[inicio];
+		int ponteiroEsq = inicio +1;
+		int ponteiroDir = fim;
 		
-		return 0;
-	}
-	
+		while (ponteiroEsq <= ponteiroDir) {
+			while (ponteiroEsq <= ponteiroDir && vetor[ponteiroEsq] <= pivoInicial) {
+				ponteiroEsq++;
+			}
+			while (ponteiroDir >= ponteiroEsq && vetor[ponteiroDir] > pivoInicial) {
+				ponteiroDir--;
+			}
+			if (ponteiroEsq < ponteiroDir) {
+				trocar(vetor, ponteiroEsq, ponteiroDir);
+				ponteiroEsq++;
+				ponteiroDir--;
+			}
+		}
+		trocar(vetor, inicio, ponteiroDir);
+		int posicaoPivoFixo = ponteiroDir;
+		return posicaoPivoFixo;
+	}	
 	
 	private void trocar(int [] vetor, int i, int j) {
+		int aux = vetor[i];
+		vetor[i] = vetor[j];
+		vetor[j] = aux;		
 		
-		
-		
-	}
-	
-	
+	}		
 }
