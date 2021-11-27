@@ -100,11 +100,11 @@ public class Principal {
 
 		static void sortingAlg() {
 
-			int[] vetor = geraVetor(Integer.parseInt(JOptionPane.showInputDialog(null, "Tamanho do vetor: ")));
+			int[] vetor = geraVetor(Integer.parseInt(JOptionPane.showInputDialog(null, "Tamanho do vetor: "))); //{8,1,8,1,3,0,1};
 			
 			SortingController oCont = new SortingController();
 			
-			exigeVetor(vetor);			
+			exibeVetor(vetor);			
 			
 			while(true) {
 				
@@ -116,13 +116,13 @@ public class Principal {
 				switch (opc){
 					case 1: {
 						vetor = oCont.bubbleSort(vetor);
-						exigeVetor(vetor);
+						exibeVetor(vetor);
 						
 					}
 						break;
 					case 2: {
 						vetor = oCont.mergeSort(vetor, 0, vetor.length - 1);
-						exigeVetor(vetor);
+						exibeVetor(vetor);
 					}
 						break;					
 					case 0: return;			
@@ -132,7 +132,7 @@ public class Principal {
 			}
 		}
 		
-		static void exigeVetor(int vetor[]) {
+		static void exibeVetor(int vetor[]) {
 			System.out.println("");
 			System.out.println("=======================================");
 			for (int valor : vetor) {

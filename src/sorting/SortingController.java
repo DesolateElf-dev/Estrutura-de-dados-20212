@@ -6,16 +6,19 @@ public class SortingController {
 		super();
 	}
 	
-	
 	public int[] bubbleSort(int array[]) {
+		
 		int tamanho = array.length;
 		
 		for (int i=0;i<tamanho;i++) {
-			for (int j=0;j<tamanho;j++) {
-				if (array[j]>array[i]+1) {
+			
+			for (int j=0;j<tamanho-1;j++) {
+				
+				if (array[j]>array[j+1]){
+					
 					int aux = array[j];
-					array[j] = array[i];
-					array[i] = aux;
+					array[j] = array[j+1];
+					array[j+1] = aux;
 				}
 			}
 			for (int valor : array) {
@@ -87,8 +90,6 @@ public class SortingController {
 		
 		
 	}
-	
-	
 	
 	
 }
